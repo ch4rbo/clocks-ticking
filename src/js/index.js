@@ -30,6 +30,37 @@ setInterval(() => {
 		segundo1 = 0;
 	}
 
+	if (minuto2 > 9) {
+		minuto2++;
+		segundo1 = 0;
+		minuto1++;
+		minuto2 = 0;
+	}
+
+	if (minuto1 > 5) {
+		hora2++;
+		segundo1 = 0;
+		minuto1 = 0;
+		minuto2 = 0;
+	}
+
+	if (hora2 > 9) {
+		hora1++;
+		hora2 = 0;
+		segundo2 = 0;
+		segundo1 = 0;
+		minuto1 = 0;
+		minuto2 = 0;
+	}
+	if (hora1 > 9) {
+		hora1 = 0;
+		hora2 = 0;
+		segundo2 = 0;
+		segundo1 = 0;
+		minuto1 = 0;
+		minuto2 = 0;
+	}
+
 	ReactDOM.render(
 		<Clock
 			a={hora1}
@@ -41,4 +72,4 @@ setInterval(() => {
 		/>,
 		document.querySelector("#app")
 	);
-}, 100);
+}, 1);
